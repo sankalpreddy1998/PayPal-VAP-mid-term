@@ -1,7 +1,13 @@
 # PayPal-VAP-mid-term
 
-V_Pal is a course registration system inspired from VIT(FFCS).
-![V_Pal](https://github.com/sankalpreddy1998/PayPal-VAP-mid-term/images-git/timetable.jpg)
+![V_Pal](https://github.com/sankalpreddy1998/PayPal-VAP-mid-term/blob/master/images-git/timetable.JPG)
+
+
+V_Pal is a course registration system inspired from VIT(FFCS). It enables the administration to create, read, update, delete and map courses with classes and slots. Teachers register for these courses. Once the registration phase for the teachers is complete, the students select the courses the want to enroll to based on a credit system.
+
+System used: FFCS-Fully Flexible Credit System
+
+
 
 ## Getting Started
 * [Demo Video](https://youtu.be/vEo_ertgHhg ) - Demonstration of the application
