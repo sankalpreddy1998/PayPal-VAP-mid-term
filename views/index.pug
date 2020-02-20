@@ -1,0 +1,27 @@
+
+html
+    head
+        title V-Pal
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css') 
+        link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons') 
+    
+    body.grey.lighten-5  
+        div.navbar-fixed
+            nav(class="nav-wraper indigo")
+                a(class="brand-logo" style="margin-left:30px" href="/") V-Pal
+                ul(id="nav-mobile" class="right hide-on-med-and-down")
+                    li 
+                        a(href="/student") Student
+                    li 
+                        a(href="/teacher") Teacher
+
+
+        
+        div.container.valign-wrapper.center-align(style="height:80%;justify-content:center")
+            div
+                h1.center Welcome to V_Pal
+                p.flow-text V_Pal is a platform that enables students and teachers to enroll to courses created by the administration of their institutes  
+            
+        script(src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous")
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js')
+        script(src='/js/index.js')

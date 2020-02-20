@@ -1,0 +1,25 @@
+html
+    head
+        title V-Pal
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css') 
+        link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons') 
+    
+    body.grey.lighten-5  
+        div.navbar-fixed
+            nav(class="nav-wraper indigo")
+                a(class="brand-logo" style="margin-left:30px" href="/") V-Pal
+                ul.right(style="margin-right:40px")
+                    li Student
+        div.container.s3(style="background-color:white;width:30%;padding:40px;padding-top:20px;padding-bottom:60px;margin-top:100px")
+            form(action="/student/dashboard", method="post")
+                h4(style="margin-bottom:40px") Login
+                div.input-field
+                    input(id="email" type="text" class="validate" name="email")
+                    label(for="email") Registration No
+                div.input-field
+                    input(id="password" type="password" class="validate" name="password")
+                    label(for="password") Password
+                input(class="btn right" type="submit", value="Submit" style="margin-top:10px")  
+        
+        script(src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous")
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js')

@@ -1,0 +1,113 @@
+
+html
+    head
+        title V-Pal
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css') 
+        link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons') 
+    
+    body.grey.lighten-5  
+        ul(id="dropdown1" class="dropdown-content")
+            li
+                a(href="/admin/logout") Logout
+
+        div.navbar-fixed
+            nav(class="nav-wraper indigo")
+                a(class="brand-logo" style="margin-left:30px") V-Pal
+                ul.right.hide-on-med-and-down
+                    li
+                        a.dropdown-trigger(href="#!" data-target="dropdown1") Admin
+                            i.material-icons.right arrow_drop_down
+
+
+        ul(class="sidenav sidenav-fixed" style="width:200px;margin-top:64px")
+            li.lone(style="margin-top:15px")
+                a.waves-effect(href="/admin/dashboard/teacher")  
+                    i.material-icons person
+                    span Teachers
+            li.lone(style="margin-top:15px")
+                a.waves-effect(href="/admin/dashboard/student")  
+                    i.material-icons group
+                    span Students
+            li.lone(style="margin-top:15px")
+                a.waves-effect(href="/admin/dashboard/slots")  
+                    i.material-icons assignment 
+                    span Slots
+            li.lone(style="margin-top:15px")
+                a.waves-effect(href="/admin/dashboard/classes")  
+                    i.material-icons apartment
+                    span Classes
+            li.lone(style="margin-top:15px")
+                a.waves-effect(href="/admin/dashboard/courses")  
+                    i.material-icons class 
+                    span Courses
+            li.lone(style="margin-top:15px")
+                a.waves-effect(href="/admin/dashboard/csc")  
+                    i.material-icons attachment
+                    span Map Course
+        div.container
+            h4.left(style="margin-left:20px") Teachers
+            div.modal(id="terms")
+                div.modal-content
+                    form(action="/admin/dashboard/teachers/add_teacher", method="post")
+                        h4(style="margin-bottom:40px") Add New Teacher
+                        div.input-field
+                            input(id="name" type="text" class="validate" name="name")
+                            label(for="name") Name 
+                        div.input-field
+                            input(id="reg_no" type="text" class="validate" name="reg_no")
+                            label(for="reg_no") Reg No 
+                        div.input-field
+                            input(id="password" type="text" class="validate" name="password")
+                            label(for="password") Password 
+                        div.input-field
+                            input(id="credits" type="number" class="validate" name="credits")
+                            label(for="credits") Credits
+                        input(class="btn right modal-close" type="submit", value="Submit" style="margin-top:10px")
+            
+            
+            
+
+        div.container.center(style="margin-left:200px;margin-top:30px")
+            table(style="margin:5%;margin-top:2%;margin-right:5%;background-color:white;width:90%")
+                thead
+                    tr
+                        th Name
+                        th Reg No
+                        th Password
+                        th Credits
+                        th
+                            a.left.indigo.lighten-2(href="#terms" class="waves-effect waves-light btn-floating modal-trigger")
+                                i.material-icons add
+                tbody
+                    each val,index in teachers
+                        tr
+                            td= val.name
+                            td= val.reg_no
+                            td= val.password
+                            td= val.credits
+                            td(style="width:50px")   
+                                form(action="/admin/dashboard/teachers/delete_teacher/"+val.id, method="post")
+                                    input(class="btn right" type="submit", value="delete")
+                            td(style="width:80px")    
+                                a(href="#edit"+val.id class="waves-effect waves-light btn modal-trigger" ) Edit
+                                div.modal(id="edit"+val.id)
+                                    div.modal-content
+                                        form(action="/admin/dashboard/teachers/edit_teacher/"+val.id, method="post")
+                                            h4(style="margin-bottom:40px") Edit Teacher
+                                            div.input-field
+                                                input(id="name" type="text" class="validate" name="name")
+                                                label(for="name") Name 
+                                            div.input-field
+                                                input(id="reg_no" type="text" class="validate" name="reg_no")
+                                                label(for="reg_no") Reg No 
+                                            div.input-field
+                                                input(id="password" type="text" class="validate" name="password")
+                                                label(for="password") Password 
+                                            div.input-field
+                                                input(id="credits" type="number" class="validate" name="credits")
+                                                label(for="credits") Credits
+                                            input(class="btn right modal-close" type="submit", value="Submit" style="margin-top:10px")
+
+        script(src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous")
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js')
+        script(src='/js/index.js')

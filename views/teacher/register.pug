@@ -1,0 +1,80 @@
+
+html
+    head
+        title V-Pal
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css') 
+        link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons') 
+    
+    body.grey.lighten-5  
+        ul(id="dropdown1" class="dropdown-content")
+            li
+                a(href="/teacher/logout") Logout
+
+        div.navbar-fixed
+            nav(class="nav-wraper indigo")
+                a(class="brand-logo" style="margin-left:30px") V-Pal
+                ul.right.hide-on-med-and-down
+                    li
+                        a.dropdown-trigger(href="#!" data-target="dropdown1")= name
+                            i.material-icons.right arrow_drop_down
+
+
+        ul(class="sidenav sidenav-fixed" style="width:200px;margin-top:64px")
+            li.lone(style="margin-top:15px")
+                a.waves-effect(href="/teacher/registered")  
+                    i.material-icons person
+                    span Registered
+            li.lone(style="margin-top:15px")
+                a.waves-effect(href="/teacher/register")  
+                    i.material-icons group
+                    span Register
+        
+
+        div.container(style="margin-top:0px")
+            h4.left(style="margin-left:20px") Courses Available
+            
+
+
+        div.container.center(style="margin-left:200px;margin-top:30px")
+            table(style="margin:5%;margin-top:2%;margin-right:5%;background-color:white;width:90%")
+                thead
+                    tr
+                        th Course Name
+                        th Course Code
+                        th Credits
+                        th Slot
+                        th Time
+                        th Block
+                        th Class no
+                tbody
+                    each val,index in mapped_data
+                        tr
+                            td
+                                div
+                                    p= val.course.name
+                            td
+                                div
+                                    p= val.course.code
+                            td
+                                div
+                                    p= val.course.credits
+                            td
+                                div
+                                    p= val.slot.name
+                            td
+                                div
+                                    p= val.slot.time
+                            td
+                                div
+                                    p= val.class.block
+                            td
+                                div
+                                    p= val.class.class_number
+                            td(style="width:50px")   
+                                form(action="/teacher/register/register_course/"+val.id, method="post")
+                                    input(class="btn right" type="submit", value="register")
+ 
+            
+        script(src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous")
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js')
+        script(src='/js/index.js')

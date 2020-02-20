@@ -1,0 +1,53 @@
+
+html
+    head
+        title V-Pal
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css') 
+        link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons') 
+    
+    body.grey.lighten-5  
+        
+
+        ul(id="dropdown1" class="dropdown-content")
+            li
+                a(href="/admin/logout") Logout
+
+        div.navbar-fixed
+            nav(class="nav-wraper indigo")
+                a(class="brand-logo" style="margin-left:30px") V-Pal
+                ul.right.hide-on-med-and-down
+                    li
+                        a.dropdown-trigger(href="#!" data-target="dropdown1") Admin
+                            i.material-icons.right arrow_drop_down
+            
+
+
+        ul(class="sidenav sidenav-fixed" style="width:200px;margin-top:64px")
+            li.lone(style="margin-top:15px")
+                a.waves-effect(href="/admin/dashboard/teacher")  
+                    i.material-icons person
+                    span Teachers
+            li.lone(style="margin-top:15px")
+                a.waves-effect(href="/admin/dashboard/student")  
+                    i.material-icons group
+                    span Students
+            li.lone(style="margin-top:15px")
+                a.waves-effect(href="/admin/dashboard/slots")  
+                    i.material-icons assignment 
+                    span Slots
+            li.lone(style="margin-top:15px")
+                a.waves-effect(href="/admin/dashboard/classes")  
+                    i.material-icons apartment
+                    span Classes
+            li.lone(style="margin-top:15px")
+                a.waves-effect(href="/admin/dashboard/courses")  
+                    i.material-icons class 
+                    span Courses
+            li.lone(style="margin-top:15px")
+                a.waves-effect(href="/admin/dashboard/csc")  
+                    i.material-icons attachment
+                    span Map Course
+            
+        script(src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous")
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js')
+        script(src='/js/index.js')
