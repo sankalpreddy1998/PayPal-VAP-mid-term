@@ -6,7 +6,8 @@
 
 <br/>
 
-![V_Pal](https://github.com/sankalpreddy1998/PayPal-VAP-mid-term/blob/master/images-git/crud.JPG)
+![V_Pal](https://github.com/sankalpreddy1998/PayPal-VAP-mid-term/blob/master/images-git/registered1.JPG)
+
 
 <br/>
 
@@ -16,8 +17,8 @@ V_Pal is a course registration system inspired from VIT(FFCS). It enables the ad
 
 <br/>
 
+![V_Pal](https://github.com/sankalpreddy1998/PayPal-VAP-mid-term/blob/master/images-git/crud.JPG)
 
-![V_Pal](https://github.com/sankalpreddy1998/PayPal-VAP-mid-term/blob/master/images-git/registered1.JPG)
 
 
 System used: FFCS-Fully Flexible Credit System
